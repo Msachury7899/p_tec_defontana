@@ -1,0 +1,22 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Poke API - M.S.A.G</a>
+  </div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-12 col-lg-8">
+      <app-poke-api-table></app-poke-api-table>
+
+    </div>
+    <div class="col-12 col-lg-4 align-self-center">
+      <app-poke-api-detail *ngIf="!!(selectedPokemon | async)"></app-poke-api-detail>
+      <app-poke-api-info ></app-poke-api-info>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-8 mx-auto ">
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+<div class="container mt-5" >
+  <div class="card">
+    <div class="card-body">
+      <h3 class="text-center">Cantidad de Pokemon por letra</h3>
+      <div class="row mt-3">
+        <div class="col-12 mt-3 align-self-center">
+          <ul class="list-group ">
+            <cdk-virtual-scroll-viewport  style="height: 160px" itemSize="5" >
+              <ng-container *cdkVirtualFor="let letterCount of letterCountPokemon$ | async">
+                <li class="list-group-item d-flex justify-content-between align-items-start"  >
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{letterCount.letter}}</div>
+                  </div>
+                  <span class="badge bg-info rounded-pill align-self-center">{{letterCount.count}}</span>
+                </li>
+              </ng-container>
+            </cdk-virtual-scroll-viewport>
+          </ul>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+</div>
